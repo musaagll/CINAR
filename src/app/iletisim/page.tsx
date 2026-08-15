@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "İletişim | Ankara Klima & Beyaz Eşya Servisi",
   description:
     "Ankara klima ve beyaz eşya servisi için bize ulaşın. Telefon: 0507 586 60 63. WhatsApp ile hızlı iletişim. Ankara'nın tüm ilçelerine servis.",
-  alternates: { canonical: "https://cinarklima.com/iletisim" },
+  alternates: { canonical: "https://cinarsogutmabeyazesya.com/iletisim" },
 };
 
 export default function IletisimPage() {

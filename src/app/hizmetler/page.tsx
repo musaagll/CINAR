@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Hizmetlerimiz | Ankara Klima & Beyaz Eşya Servisi",
   description:
     "Ankara genelinde klima tamiri, klima bakımı, klima montajı, klima gaz dolumu ve beyaz eşya tamir, bakım, onarım hizmetleri. Çınar Klima & Beyaz Eşya Servisi.",
-  alternates: { canonical: "https://cinarklima.com/hizmetler" },
+  alternates: { canonical: "https://cinarsogutmabeyazesya.com/hizmetler" },
 };
 
 const klimaServices = [
