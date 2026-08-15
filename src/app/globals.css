@@ -1,26 +1,134 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-navy: #0f1f3d;
+  --color-navy-light: #1a2f57;
+  --color-navy-dark: #0a1628;
+  --color-blue: #1d6aff;
+  --color-blue-light: #3d82ff;
+  --color-blue-ice: #e8f0fe;
+  --color-surface: #f7f8fa;
+  --color-surface-2: #eef0f4;
+  --color-text: #0f1f3d;
+  --color-text-muted: #5a6a85;
+  --color-text-light: #8898aa;
+  --color-border: #dde3ec;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #0f1f3d;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 700;
+    color: #0f1f3d;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  button, input, select, textarea {
+    font-family: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1d6aff;
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease both;
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Sonsuz kayan marka bandı */
+  .brand-scroll {
+    animation: brandScroll 28s linear infinite;
+  }
+
+  .brand-scroll:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes brandScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.333%); }
+  }
+
+  /* Yorum bandı — sola */
+  .review-scroll-left {
+    animation: reviewLeft 80s linear infinite;
+  }
+  .review-scroll-left:hover {
+    animation-play-state: paused;
+  }
+  @keyframes reviewLeft {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-33.333%); }
+  }
+
+  /* Yorum bandı — sağa */
+  .review-scroll-right {
+    animation: reviewRight 80s linear infinite;
+  }
+  .review-scroll-right:hover {
+    animation-play-state: paused;
+  }
+  @keyframes reviewRight {
+    0%   { transform: translateX(-33.333%); }
+    100% { transform: translateX(0); }
+  }
 }
