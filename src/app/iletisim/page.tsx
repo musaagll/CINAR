@@ -4,17 +4,14 @@ export const metadata: Metadata = {
   title: "İletişim | Ankara Klima & Beyaz Eşya Servisi",
   description:
     "Ankara klima ve beyaz eşya servisi için bize ulaşın. Telefon: 0507 586 60 63 veya 0536 932 24 22. WhatsApp ile hızlı iletişim. Ankara'nın tüm ilçelerine servis.",
-  alternates: { canonical: "https://cinarsogutmabeyazesya.com/iletisim" },
+  alternates: { canonical: "https://cinarklima.com/iletisim" },
 };
 
-const PhoneIcon = ({ color = "#1d6aff" }: { color?: string }) => (
+const PhoneIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <path
       d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      stroke="#1d6aff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
     />
   </svg>
 );
@@ -37,9 +34,7 @@ export default function IletisimPage() {
       {/* Page Header */}
       <div className="bg-[#f7f8fa] pt-28 pb-14 lg:pt-36 lg:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold text-[#1d6aff] uppercase tracking-widest mb-3">
-            İletişim
-          </p>
+          <p className="text-xs font-semibold text-[#1d6aff] uppercase tracking-widest mb-3">İletişim</p>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0f1f3d] mb-5 tracking-tight">
             Bizimle İletişime Geçin
           </h1>
@@ -55,95 +50,61 @@ export default function IletisimPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Hat 1 */}
-          <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-widest mb-4">
-            Hat 1 — 0507 586 60 63
-          </p>
+          <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-widest mb-4">Hat 1 — 0507 586 60 63</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mb-10">
-            <a
-              href="tel:05075866063"
+            <a href="tel:05075866063"
               className="group flex flex-col gap-4 p-7 rounded-2xl bg-[#f7f8fa] border border-[#eef0f4] hover:border-[#1d6aff]/30 hover:bg-white hover:shadow-[0_4px_24px_0_rgba(29,106,255,0.08)] transition-all duration-200"
-              aria-label="0507 586 60 63 numarasını ara"
-            >
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]">
-                <PhoneIcon />
-              </div>
+              aria-label="0507 586 60 63 numarasını ara">
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]"><PhoneIcon /></div>
               <div>
                 <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-wider mb-1">Telefon</p>
                 <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">0507 586 60 63</p>
                 <p className="text-sm text-[#5a6a85]">Tıklayarak hemen arayın</p>
               </div>
-              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1d6aff] group-hover:gap-2.5 transition-all duration-150">
-                Hemen Ara <Arrow />
-              </span>
+              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1d6aff] group-hover:gap-2.5 transition-all duration-150">Hemen Ara <Arrow /></span>
             </a>
-
-            <a
-              href="https://wa.me/905075866063"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href="https://wa.me/905075866063" target="_blank" rel="noopener noreferrer"
               className="group flex flex-col gap-4 p-7 rounded-2xl bg-[#f7f8fa] border border-[#eef0f4] hover:border-[#25D366]/40 hover:bg-white hover:shadow-[0_4px_24px_0_rgba(37,211,102,0.08)] transition-all duration-200"
-              aria-label="0507 586 60 63 ile WhatsApp"
-            >
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]">
-                <WaIcon />
-              </div>
+              aria-label="0507 586 60 63 ile WhatsApp">
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]"><WaIcon /></div>
               <div>
                 <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-wider mb-1">WhatsApp</p>
                 <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">0507 586 60 63</p>
                 <p className="text-sm text-[#5a6a85]">Mesaj gönderin, hızlıca yanıt alalım</p>
               </div>
-              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#25D366] group-hover:gap-2.5 transition-all duration-150">
-                WhatsApp&apos;tan Yaz <Arrow />
-              </span>
+              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#25D366] group-hover:gap-2.5 transition-all duration-150">WhatsApp&apos;tan Yaz <Arrow /></span>
             </a>
           </div>
 
           {/* Hat 2 */}
-          <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-widest mb-4">
-            Hat 2 — 0536 932 24 22
-          </p>
+          <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-widest mb-4">Hat 2 — 0536 932 24 22</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mb-10">
-            <a
-              href="tel:05369322422"
+            <a href="tel:05369322422"
               className="group flex flex-col gap-4 p-7 rounded-2xl bg-[#f7f8fa] border border-[#eef0f4] hover:border-[#1d6aff]/30 hover:bg-white hover:shadow-[0_4px_24px_0_rgba(29,106,255,0.08)] transition-all duration-200"
-              aria-label="0536 932 24 22 numarasını ara"
-            >
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]">
-                <PhoneIcon />
-              </div>
+              aria-label="0536 932 24 22 numarasını ara">
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]"><PhoneIcon /></div>
               <div>
                 <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-wider mb-1">Telefon</p>
                 <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">0536 932 24 22</p>
                 <p className="text-sm text-[#5a6a85]">Tıklayarak hemen arayın</p>
               </div>
-              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1d6aff] group-hover:gap-2.5 transition-all duration-150">
-                Hemen Ara <Arrow />
-              </span>
+              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1d6aff] group-hover:gap-2.5 transition-all duration-150">Hemen Ara <Arrow /></span>
             </a>
-
-            <a
-              href="https://wa.me/905369322422"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href="https://wa.me/905369322422" target="_blank" rel="noopener noreferrer"
               className="group flex flex-col gap-4 p-7 rounded-2xl bg-[#f7f8fa] border border-[#eef0f4] hover:border-[#25D366]/40 hover:bg-white hover:shadow-[0_4px_24px_0_rgba(37,211,102,0.08)] transition-all duration-200"
-              aria-label="0536 932 24 22 ile WhatsApp"
-            >
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]">
-                <WaIcon />
-              </div>
+              aria-label="0536 932 24 22 ile WhatsApp">
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]"><WaIcon /></div>
               <div>
                 <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-wider mb-1">WhatsApp</p>
                 <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">0536 932 24 22</p>
                 <p className="text-sm text-[#5a6a85]">Mesaj gönderin, hızlıca yanıt alalım</p>
               </div>
-              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#25D366] group-hover:gap-2.5 transition-all duration-150">
-                WhatsApp&apos;tan Yaz <Arrow />
-              </span>
+              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#25D366] group-hover:gap-2.5 transition-all duration-150">WhatsApp&apos;tan Yaz <Arrow /></span>
             </a>
           </div>
 
           {/* Hizmet bölgesi */}
-          <div className="flex items-center gap-3 max-w-2xl p-5 rounded-2xl bg-[#f7f8fa] border border-[#eef0f4]">
+          <div className="mt-8 flex items-center gap-3 max-w-2xl p-5 rounded-2xl bg-[#f7f8fa] border border-[#eef0f4]">
             <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-white border border-[#dde3ec]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#1d6aff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

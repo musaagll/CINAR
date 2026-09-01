@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Çınar Klima & Beyaz Eşya Servisi | Ankara Klima Servisi",
   description:
     "Çınar Klima & Beyaz Eşya Servisi, Ankara genelinde klima tamiri, bakım, montaj, gaz dolumu ve beyaz eşya tamir bakım hizmetleri sunar. 0507 586 6063",
-  alternates: { canonical: "https://cinarsogutmabeyazesya.com" },
+  alternates: { canonical: "https://cinarklima.com" },
 };
 
 export default function HomePage() {

@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cinarsogutmabeyazesya.com"),
+  metadataBase: new URL("https://cinarklima.com"),
   title: {
     default: "Çınar Klima & Beyaz Eşya Servisi | Ankara Klima Servisi",
     template: "%s | Çınar Klima & Beyaz Eşya Servisi",

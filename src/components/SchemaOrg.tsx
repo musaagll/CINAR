@@ -4,9 +4,9 @@ export default function SchemaOrg() {
     "@graph": [
       {
         "@type": ["LocalBusiness", "HVACBusiness"],
-        "@id": "https://cinarsogutmabeyazesya.com/#business",
+        "@id": "https://cinarklima.com/#business",
         name: "Çınar Klima & Beyaz Eşya Servisi",
-        url: "https://cinarsogutmabeyazesya.com",
+        url: "https://cinarklima.com",
         telephone: "+905075866063",
         description:
           "Ankara genelinde klima tamiri, bakım, montaj, gaz dolumu ve beyaz eşya servis hizmetleri.",

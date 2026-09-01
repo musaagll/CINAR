@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Markalar | Ankara Klima & Beyaz Eşya Servisi",
   description:
     "Arçelik, Beko, Bosch, Samsung, LG, Vestel, Daikin, Mitsubishi ve daha pek çok marka için Ankara genelinde klima ve beyaz eşya servis hizmeti. Çınar Klima.",
-  alternates: { canonical: "https://cinarsogutmabeyazesya.com/markalar" },
+  alternates: { canonical: "https://cinarklima.com/markalar" },
 };
 
 const categories = ["Tümü", "Beyaz Eşya", "Klima", "Beyaz Eşya & Klima", "Klima & Isıtma"];

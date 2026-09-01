@@ -4,13 +4,8 @@ import { useState } from "react";
 
 const PhoneIcon = () => (
   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path
-      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
-      stroke="#1d6aff"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+      stroke="#1d6aff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
@@ -28,40 +23,22 @@ export default function MobileCTABar() {
     <>
       {/* Arama paneli */}
       {callOpen && (
-        <div
-          className="lg:hidden fixed inset-0 z-50 flex items-end bg-black/30"
-          onClick={() => setCallOpen(false)}
-        >
-          <div
-            className="w-full bg-white rounded-t-2xl shadow-2xl border-t border-[#dde3ec] p-5 pb-8"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="lg:hidden fixed inset-0 z-50 flex items-end bg-black/30" onClick={() => setCallOpen(false)}>
+          <div className="w-full bg-white rounded-t-2xl shadow-2xl border-t border-[#dde3ec] p-5 pb-8" onClick={(e) => e.stopPropagation()}>
             <div className="w-10 h-1 rounded-full bg-[#dde3ec] mx-auto mb-5" />
             <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-widest mb-4 text-center">
               Hangi numarayı aramak istersiniz?
             </p>
             <div className="flex flex-col gap-3">
-              <a
-                href="tel:05075866063"
-                className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#e8f0fe]"
-                onClick={() => setCallOpen(false)}
-              >
-                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0">
-                  <PhoneIcon />
-                </div>
+              <a href="tel:05075866063" className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#e8f0fe]" onClick={() => setCallOpen(false)}>
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0"><PhoneIcon /></div>
                 <div>
                   <p className="text-base font-extrabold text-[#0f1f3d]">0507 586 60 63</p>
                   <p className="text-xs text-[#5a6a85]">Hat 1</p>
                 </div>
               </a>
-              <a
-                href="tel:05369322422"
-                className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#e8f0fe]"
-                onClick={() => setCallOpen(false)}
-              >
-                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0">
-                  <PhoneIcon />
-                </div>
+              <a href="tel:05369322422" className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#e8f0fe]" onClick={() => setCallOpen(false)}>
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0"><PhoneIcon /></div>
                 <div>
                   <p className="text-base font-extrabold text-[#0f1f3d]">0536 932 24 22</p>
                   <p className="text-xs text-[#5a6a85]">Hat 2</p>
@@ -74,47 +51,25 @@ export default function MobileCTABar() {
 
       {/* WhatsApp paneli */}
       {waOpen && (
-        <div
-          className="lg:hidden fixed inset-0 z-50 flex items-end bg-black/30"
-          onClick={() => setWaOpen(false)}
-        >
-          <div
-            className="w-full bg-white rounded-t-2xl shadow-2xl border-t border-[#dde3ec] p-5 pb-8"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="lg:hidden fixed inset-0 z-50 flex items-end bg-black/30" onClick={() => setWaOpen(false)}>
+          <div className="w-full bg-white rounded-t-2xl shadow-2xl border-t border-[#dde3ec] p-5 pb-8" onClick={(e) => e.stopPropagation()}>
             <div className="w-10 h-1 rounded-full bg-[#dde3ec] mx-auto mb-5" />
             <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-widest mb-4 text-center">
               Hangi numara ile WhatsApp?
             </p>
             <div className="flex flex-col gap-3">
-              <a
-                href="https://wa.me/905075866063"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#f0fdf4]"
-                onClick={() => setWaOpen(false)}
-              >
-                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0">
-                  <WaIcon />
-                </div>
+              <a href="https://wa.me/905075866063" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#f0fdf4]" onClick={() => setWaOpen(false)}>
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0"><WaIcon /></div>
                 <div>
                   <p className="text-base font-extrabold text-[#0f1f3d]">0507 586 60 63</p>
-                  <p className="text-xs text-[#5a6a85]">Hat 1 — WhatsApp</p>
+                  <p className="text-xs text-[#5a6a85]">Hat 1</p>
                 </div>
               </a>
-              <a
-                href="https://wa.me/905369322422"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#f0fdf4]"
-                onClick={() => setWaOpen(false)}
-              >
-                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0">
-                  <WaIcon />
-                </div>
+              <a href="https://wa.me/905369322422" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#f0fdf4]" onClick={() => setWaOpen(false)}>
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0"><WaIcon /></div>
                 <div>
                   <p className="text-base font-extrabold text-[#0f1f3d]">0536 932 24 22</p>
-                  <p className="text-xs text-[#5a6a85]">Hat 2 — WhatsApp</p>
+                  <p className="text-xs text-[#5a6a85]">Hat 2</p>
                 </div>
               </a>
             </div>
@@ -129,22 +84,16 @@ export default function MobileCTABar() {
         aria-label="Hızlı iletişim çubuğu"
       >
         <div className="flex items-stretch h-14">
-          <button
-            onClick={() => { setCallOpen(true); setWaOpen(false); }}
+          <button onClick={() => { setCallOpen(true); setWaOpen(false); }}
             className="flex-1 flex flex-col items-center justify-center gap-0.5 hover:bg-[#f7f8fa] active:bg-[#eef0f4] transition-colors"
-            aria-label="Ara"
-          >
+            aria-label="Ara">
             <PhoneIcon />
             <span className="text-[10px] font-semibold text-[#1d6aff]">ARA</span>
           </button>
-
           <div className="w-px bg-[#dde3ec]" aria-hidden="true" />
-
-          <button
-            onClick={() => { setWaOpen(true); setCallOpen(false); }}
+          <button onClick={() => { setWaOpen(true); setCallOpen(false); }}
             className="flex-1 flex flex-col items-center justify-center gap-0.5 hover:bg-[#f7f8fa] active:bg-[#eef0f4] transition-colors"
-            aria-label="WhatsApp"
-          >
+            aria-label="WhatsApp">
             <WaIcon />
             <span className="text-[10px] font-semibold text-[#25D366]">WHATSAPP</span>
           </button>
