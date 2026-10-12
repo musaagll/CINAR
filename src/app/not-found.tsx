@@ -1,3 +1,4 @@
+import { PHONE1 } from "@/lib/contact";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -27,7 +28,7 @@ export default function NotFound() {
             Ana Sayfaya Dön
           </Link>
           <a
-            href="tel:05075866063"
+            href={PHONE1.href}
             className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-[#0f1f3d] bg-white border border-[#dde3ec] hover:border-[#1d6aff] hover:text-[#1d6aff] active:scale-95 transition-all duration-150"
           >
             Bizi Ara

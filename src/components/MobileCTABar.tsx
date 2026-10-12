@@ -1,4 +1,5 @@
 "use client";
+import { PHONE1, PHONE2 } from "@/lib/contact";
 
 import { useState } from "react";
 
@@ -30,17 +31,17 @@ export default function MobileCTABar() {
               Hangi numarayı aramak istersiniz?
             </p>
             <div className="flex flex-col gap-3">
-              <a href="tel:05075866063" className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#e8f0fe]" onClick={() => setCallOpen(false)}>
+              <a href={PHONE1.href} className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#e8f0fe]" onClick={() => setCallOpen(false)}>
                 <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0"><PhoneIcon /></div>
                 <div>
-                  <p className="text-base font-extrabold text-[#0f1f3d]">0507 586 60 63</p>
+                  <p className="text-base font-extrabold text-[#0f1f3d]">{PHONE1.display}</p>
                   <p className="text-xs text-[#5a6a85]">Hat 1</p>
                 </div>
               </a>
-              <a href="tel:05369322422" className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#e8f0fe]" onClick={() => setCallOpen(false)}>
+              <a href={PHONE2.href} className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#e8f0fe]" onClick={() => setCallOpen(false)}>
                 <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0"><PhoneIcon /></div>
                 <div>
-                  <p className="text-base font-extrabold text-[#0f1f3d]">0536 932 24 22</p>
+                  <p className="text-base font-extrabold text-[#0f1f3d]">{PHONE2.display}</p>
                   <p className="text-xs text-[#5a6a85]">Hat 2</p>
                 </div>
               </a>
@@ -58,17 +59,17 @@ export default function MobileCTABar() {
               Hangi numara ile WhatsApp?
             </p>
             <div className="flex flex-col gap-3">
-              <a href="https://wa.me/905075866063" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#f0fdf4]" onClick={() => setWaOpen(false)}>
+              <a href={PHONE1.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#f0fdf4]" onClick={() => setWaOpen(false)}>
                 <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0"><WaIcon /></div>
                 <div>
-                  <p className="text-base font-extrabold text-[#0f1f3d]">0507 586 60 63</p>
+                  <p className="text-base font-extrabold text-[#0f1f3d]">{PHONE1.display}</p>
                   <p className="text-xs text-[#5a6a85]">Hat 1</p>
                 </div>
               </a>
-              <a href="https://wa.me/905369322422" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#f0fdf4]" onClick={() => setWaOpen(false)}>
+              <a href={PHONE2.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl bg-[#f7f8fa] border border-[#eef0f4] active:bg-[#f0fdf4]" onClick={() => setWaOpen(false)}>
                 <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#e8f0fe] flex-shrink-0"><WaIcon /></div>
                 <div>
-                  <p className="text-base font-extrabold text-[#0f1f3d]">0536 932 24 22</p>
+                  <p className="text-base font-extrabold text-[#0f1f3d]">{PHONE2.display}</p>
                   <p className="text-xs text-[#5a6a85]">Hat 2</p>
                 </div>
               </a>

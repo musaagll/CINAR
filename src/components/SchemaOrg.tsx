@@ -1,3 +1,4 @@
+import { PHONE1 } from "@/lib/contact";
 export default function SchemaOrg() {
   const schema = {
     "@context": "https://schema.org",
@@ -7,7 +8,7 @@ export default function SchemaOrg() {
         "@id": "https://cinarklima.com/#business",
         name: "Çınar Klima & Beyaz Eşya Servisi",
         url: "https://cinarklima.com",
-        telephone: "+905075866063",
+        telephone: PHONE1.schema,
         description:
           "Ankara genelinde klima tamiri, bakım, montaj, gaz dolumu ve beyaz eşya servis hizmetleri.",
         address: {
@@ -22,7 +23,7 @@ export default function SchemaOrg() {
         },
         contactPoint: {
           "@type": "ContactPoint",
-          telephone: "+905075866063",
+          telephone: PHONE1.schema,
           contactType: "customer service",
           availableLanguage: "Turkish",
         },

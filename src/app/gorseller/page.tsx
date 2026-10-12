@@ -1,24 +1,11 @@
 "use client";
+import content from "@/../content/galeri.json";
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
-const PHOTOS = [
-  "126fa76d-44f2-4f5d-be07-89d086f70f29.jpg",
-  "184e55be-5f1c-4aca-813f-466e1e46f6e5.jpg",
-  "1fbe0639-5bd7-4a6b-a446-09e874d28bb1.jpg",
-  "2c2d5dea-8aa4-4cdf-b0c2-7edd22d40be0.jpg",
-  "2d81ee84-8cbf-4e45-b38f-41536ace72a2.jpg",
-  "414b4716-9bc9-4a85-8652-a356320dcddb.jpg",
-  "5362f0fc-c842-443d-8e75-b123ea33b178.jpg",
-  "55e45d53-07d7-41a7-8997-376582ddc5a7.jpg",
-  "b4fccadf-1ffc-4ff8-a889-433f07f649cb.jpg",
-  "b9922d7b-d965-4722-ad15-c48231ca513b.jpg",
-  "c2bd53a5-fceb-4beb-8016-9434a65381f3.jpg",
-  "d305d301-22e1-46a6-ba24-ea8df0775946.jpg",
-  "ee195cf9-ff28-41d3-985f-332bb038d45d.jpg",
-  "f0d87f21-2fa1-4ce8-9177-715283f30033.jpg",
-];
+// Edited from the Gomp panel (content/galeri.json).
+const PHOTOS = content.photos.map((photo) => photo.src);
 
 const VIDEOS = [
   "21dbc5a6-78c2-4276-b9b4-66d7646c353e.mp4",
@@ -81,7 +68,7 @@ export default function GorsellerPage() {
                 aria-label={`Fotoğraf ${i + 1} — büyütmek için tıklayın`}
               >
                 <Image
-                  src={`/Gorseller/${file}`}
+                  src={file}
                   alt={`Servis çalışması ${i + 1}`}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -155,7 +142,7 @@ export default function GorsellerPage() {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={`/Gorseller/${PHOTOS[lightbox]}`}
+              src={PHOTOS[lightbox]}
               alt={`Servis çalışması ${lightbox + 1}`}
               fill
               sizes="100vw"

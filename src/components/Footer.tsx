@@ -1,3 +1,4 @@
+import { PHONE1, PHONE2 } from "@/lib/contact";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -25,13 +26,13 @@ export default function Footer() {
               Ankara genelinde klima ve beyaz eşya servis hizmetleri.
             </p>
             <div className="flex flex-col mt-4 gap-2">
-              <a href="tel:05075866063" className="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-[#3d82ff] transition-colors" aria-label="Telefon: 0507 586 60 63">
+              <a href={PHONE1.href} className="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-[#3d82ff] transition-colors" aria-label={`Telefon: ${PHONE1.display}`}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#3d82ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                0507 586 60 63
+                {PHONE1.display}
               </a>
-              <a href="tel:05369322422" className="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-[#3d82ff] transition-colors" aria-label="Telefon: 0536 932 24 22">
+              <a href={PHONE2.href} className="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-[#3d82ff] transition-colors" aria-label={`Telefon: ${PHONE2.display}`}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#3d82ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                0536 932 24 22
+                {PHONE2.display}
               </a>
             </div>
           </div>
@@ -107,10 +108,10 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li className="text-sm text-slate-400">
-                <a href="tel:05075866063" className="hover:text-white transition-colors">0507 586 60 63</a>
+                <a href={PHONE1.href} className="hover:text-white transition-colors">{PHONE1.display}</a>
               </li>
               <li className="text-sm text-slate-400">
-                <a href="tel:05369322422" className="hover:text-white transition-colors">0536 932 24 22</a>
+                <a href={PHONE2.href} className="hover:text-white transition-colors">{PHONE2.display}</a>
               </li>
               <li className="text-sm text-slate-400">Ankara</li>
             </ul>
@@ -122,7 +123,7 @@ export default function Footer() {
             © 2026 Çınar Klima &amp; Beyaz Eşya Servisi. Tüm hakları saklıdır.
           </p>
           <a
-            href="https://wa.me/905075866063"
+            href={PHONE1.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"

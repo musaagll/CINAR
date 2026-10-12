@@ -1,3 +1,4 @@
+import { PHONE1 } from "@/lib/contact";
 import type { Metadata } from "next";
 import { brands } from "@/lib/brands";
 import CTASection from "@/components/CTASection";
@@ -82,10 +83,10 @@ export default function MarkalarsPage() {
               Listede yer almayan marka ve model için de servis hizmeti sunuyoruz.
               Cihazınızın markasından bağımsız olarak{" "}
               <a
-                href="tel:05075866063"
+                href={PHONE1.href}
                 className="text-[#1d6aff] font-semibold hover:underline"
               >
-                0507 586 60 63
+                {PHONE1.display}
               </a>{" "}
               numaralı hattımızı arayabilirsiniz.
             </p>

@@ -1,10 +1,6 @@
-const districts = [
-  "Çankaya", "Keçiören", "Yenimahalle", "Mamak", "Etimesgut",
-  "Sincan", "Altındağ", "Pursaklar", "Gölbaşı", "Eryaman",
-  "Batıkent", "İncek", "Beypazarı", "Nallıhan", "Çamlıdere",
-  "Kızılcahamam", "Çubuk", "Elmadağ", "Polatlı", "Haymana",
-  "Bala", "Şereflikoçhisar", "Kahramankazan", "Akyurt",
-];
+import content from "@/../content/bolgeler.json";
+// Edited from the Gomp panel (content/bolgeler.json).
+const districts = content.districts;
 
 export default function ServiceAreas() {
   return (

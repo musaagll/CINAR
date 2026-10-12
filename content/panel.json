@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "id": "iletisim",
+      "path": "content/iletisim.json",
+      "title": "Telefon numaraları",
+      "description": "Sitedeki bütün arama ve WhatsApp butonları, iki hat",
+      "previewPath": "/iletisim",
+      "fields": [
+        { "key": "phone1", "label": "Hat 1", "type": "text", "required": true, "max": 20, "pattern": "^0\\d{3} \\d{3} \\d{2} \\d{2}$", "hint": "Bu biçimde yazın: 0507 586 60 63. WhatsApp ve Google bilgisi de bu numarayı kullanır" },
+        { "key": "phone2", "label": "Hat 2", "type": "text", "required": true, "max": 20, "pattern": "^0\\d{3} \\d{3} \\d{2} \\d{2}$", "hint": "Bu biçimde yazın: 0536 932 24 22" }
+      ]
+    },
+    {
+      "id": "galeri",
+      "path": "content/galeri.json",
+      "title": "Fotoğraf galerisi",
+      "description": "/gorseller sayfasındaki fotoğraflar (videolar kodda)",
+      "previewPath": "/gorseller",
+      "fields": [
+        {
+          "key": "photos",
+          "label": "Fotoğraflar",
+          "type": "list",
+          "minItems": 1,
+          "maxItems": 60,
+          "hint": "Sıralama sayfadaki sıradır",
+          "fields": [{ "key": "src", "label": "Fotoğraf", "type": "image", "required": true, "dir": "public/Gorseller", "maxWidth": 1600 }]
+        }
+      ]
+    },
+    {
+      "id": "yorumlar",
+      "path": "content/yorumlar.json",
+      "title": "Müşteri yorumları",
+      "description": "Ana sayfada kayan yorumlar (ilk 25 üst satırda, kalanı alt satırda)",
+      "previewPath": "/",
+      "fields": [
+        {
+          "key": "reviews",
+          "label": "Yorumlar",
+          "type": "list",
+          "itemLabel": "name",
+          "minItems": 2,
+          "maxItems": 100,
+          "fields": [
+            { "key": "name", "label": "Ad", "type": "text", "required": true, "max": 30, "hint": "Örn. Mehmet A." },
+            { "key": "city", "label": "İlçe", "type": "text", "required": true, "max": 30 },
+            { "key": "text", "label": "Yorum", "type": "textarea", "required": true, "max": 160 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "markalar",
+      "path": "content/markalar.json",
+      "title": "Markalar",
+      "description": "/markalar sayfası ve ana sayfadaki kayan marka şeridi",
+      "previewPath": "/markalar",
+      "fields": [
+        {
+          "key": "brands",
+          "label": "Markalar",
+          "type": "list",
+          "itemLabel": "name",
+          "minItems": 1,
+          "maxItems": 60,
+          "fields": [
+            { "key": "name", "label": "Marka", "type": "text", "required": true, "max": 30 },
+            { "key": "category", "label": "Kategori", "type": "text", "required": true, "max": 30 },
+            { "key": "country", "label": "Ülke", "type": "text", "required": true, "max": 30 },
+            { "key": "desc", "label": "Açıklama", "type": "textarea", "required": true, "max": 200 },
+            { "key": "color", "label": "Marka rengi", "type": "text", "required": true, "pattern": "^#[0-9A-Fa-f]{6}$", "hint": "Onaltılık renk kodu, örn. #E30613" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bolgeler",
+      "path": "content/bolgeler.json",
+      "title": "Hizmet bölgeleri",
+      "description": "Ana sayfadaki 'Ankara'nın Her Yerindeyiz' ilçe listesi",
+      "previewPath": "/",
+      "fields": [{ "key": "districts", "label": "İlçeler", "type": "strings", "max": 30, "minItems": 1, "maxItems": 50 }]
+    }
+  ]
+}

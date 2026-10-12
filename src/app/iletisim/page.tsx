@@ -1,9 +1,10 @@
+import { PHONE1, PHONE2 } from "@/lib/contact";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "İletişim | Ankara Klima & Beyaz Eşya Servisi",
   description:
-    "Ankara klima ve beyaz eşya servisi için bize ulaşın. Telefon: 0507 586 60 63 veya 0536 932 24 22. WhatsApp ile hızlı iletişim. Ankara'nın tüm ilçelerine servis.",
+    `Ankara klima ve beyaz eşya servisi için bize ulaşın. Telefon: ${PHONE1.display} veya ${PHONE2.display}. WhatsApp ile hızlı iletişim. Ankara'nın tüm ilçelerine servis.`,
   alternates: { canonical: "https://cinarklima.com/iletisim" },
 };
 
@@ -50,26 +51,26 @@ export default function IletisimPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Hat 1 */}
-          <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-widest mb-4">Hat 1 — 0507 586 60 63</p>
+          <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-widest mb-4">{`Hat 1 — ${PHONE1.display}`}</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mb-10">
-            <a href="tel:05075866063"
+            <a href={PHONE1.href}
               className="group flex flex-col gap-4 p-7 rounded-2xl bg-[#f7f8fa] border border-[#eef0f4] hover:border-[#1d6aff]/30 hover:bg-white hover:shadow-[0_4px_24px_0_rgba(29,106,255,0.08)] transition-all duration-200"
-              aria-label="0507 586 60 63 numarasını ara">
+              aria-label={`${PHONE1.display} numarasını ara`}>
               <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]"><PhoneIcon /></div>
               <div>
                 <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-wider mb-1">Telefon</p>
-                <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">0507 586 60 63</p>
+                <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">{PHONE1.display}</p>
                 <p className="text-sm text-[#5a6a85]">Tıklayarak hemen arayın</p>
               </div>
               <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1d6aff] group-hover:gap-2.5 transition-all duration-150">Hemen Ara <Arrow /></span>
             </a>
-            <a href="https://wa.me/905075866063" target="_blank" rel="noopener noreferrer"
+            <a href={PHONE1.whatsapp} target="_blank" rel="noopener noreferrer"
               className="group flex flex-col gap-4 p-7 rounded-2xl bg-[#f7f8fa] border border-[#eef0f4] hover:border-[#25D366]/40 hover:bg-white hover:shadow-[0_4px_24px_0_rgba(37,211,102,0.08)] transition-all duration-200"
-              aria-label="0507 586 60 63 ile WhatsApp">
+              aria-label={`${PHONE1.display} ile WhatsApp`}>
               <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]"><WaIcon /></div>
               <div>
                 <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-wider mb-1">WhatsApp</p>
-                <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">0507 586 60 63</p>
+                <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">{PHONE1.display}</p>
                 <p className="text-sm text-[#5a6a85]">Mesaj gönderin, hızlıca yanıt alalım</p>
               </div>
               <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#25D366] group-hover:gap-2.5 transition-all duration-150">WhatsApp&apos;tan Yaz <Arrow /></span>
@@ -77,26 +78,26 @@ export default function IletisimPage() {
           </div>
 
           {/* Hat 2 */}
-          <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-widest mb-4">Hat 2 — 0536 932 24 22</p>
+          <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-widest mb-4">{`Hat 2 — ${PHONE2.display}`}</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mb-10">
-            <a href="tel:05369322422"
+            <a href={PHONE2.href}
               className="group flex flex-col gap-4 p-7 rounded-2xl bg-[#f7f8fa] border border-[#eef0f4] hover:border-[#1d6aff]/30 hover:bg-white hover:shadow-[0_4px_24px_0_rgba(29,106,255,0.08)] transition-all duration-200"
-              aria-label="0536 932 24 22 numarasını ara">
+              aria-label={`${PHONE2.display} numarasını ara`}>
               <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]"><PhoneIcon /></div>
               <div>
                 <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-wider mb-1">Telefon</p>
-                <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">0536 932 24 22</p>
+                <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">{PHONE2.display}</p>
                 <p className="text-sm text-[#5a6a85]">Tıklayarak hemen arayın</p>
               </div>
               <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1d6aff] group-hover:gap-2.5 transition-all duration-150">Hemen Ara <Arrow /></span>
             </a>
-            <a href="https://wa.me/905369322422" target="_blank" rel="noopener noreferrer"
+            <a href={PHONE2.whatsapp} target="_blank" rel="noopener noreferrer"
               className="group flex flex-col gap-4 p-7 rounded-2xl bg-[#f7f8fa] border border-[#eef0f4] hover:border-[#25D366]/40 hover:bg-white hover:shadow-[0_4px_24px_0_rgba(37,211,102,0.08)] transition-all duration-200"
-              aria-label="0536 932 24 22 ile WhatsApp">
+              aria-label={`${PHONE2.display} ile WhatsApp`}>
               <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#e8f0fe]"><WaIcon /></div>
               <div>
                 <p className="text-xs font-semibold text-[#8898aa] uppercase tracking-wider mb-1">WhatsApp</p>
-                <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">0536 932 24 22</p>
+                <p className="text-2xl font-extrabold text-[#0f1f3d] tracking-tight mb-1">{PHONE2.display}</p>
                 <p className="text-sm text-[#5a6a85]">Mesaj gönderin, hızlıca yanıt alalım</p>
               </div>
               <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#25D366] group-hover:gap-2.5 transition-all duration-150">WhatsApp&apos;tan Yaz <Arrow /></span>
